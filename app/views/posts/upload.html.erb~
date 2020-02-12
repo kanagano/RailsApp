@@ -1,0 +1,9 @@
+<%= form_tag("/posts/create") do %>
+	<p>product name</p>
+	<input name="name" value="<%= @post.name %>">
+	<p>product price</p>
+	<input name="price" value="<%= @post.price %>">
+	<p>product period</p>
+	<input name="period" value="<%= @post.period %>">
+	<input type="submit" value="upload">
+<% end %>

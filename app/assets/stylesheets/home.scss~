@@ -1,0 +1,15 @@
+body {
+	color: blue;
+}
+
+.header-logo {
+	text-align: center;
+	font-size: 20px;
+	font-family: fantasy;
+}
+
+.menu {
+	text-align: center;
+	font-size: 10px;
+}
+

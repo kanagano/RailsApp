@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FlyerApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+	  <div class="header-logo"> 
+		  <h1>FLYER-APP</h1>
+	  </div>
+	  <div class="menu">
+		  <p>
+		  <%= link_to("top", "/") %>
+		  <%= link_to("about", "/about") %>
+		  <%= link_to("posts", "/posts/index") %>
+		  <%= link_to("stores", "/users/index") %> 
+		  <% if @current_user %>
+			  <%= link_to("logout", "/logout", {method: :post}) %> 
+			  <%= link_to("upload", "/posts/upload") %> 
+		  <% else %>
+			  <%= link_to("create", "/users/new") %> 
+			  <%= link_to("login", "/login") %>
+		  <% end %>
+		  </p>
+	  </div>
+	  <%= yield %>
+  </body>
+</html>

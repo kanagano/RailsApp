@@ -1,0 +1,11 @@
+<% @users.each do |user| %>
+	<div class="flyers">
+		<%= link_to(user.name, "/users/#{user.id}") %>
+		<% posts = @posts.where(user_id: user.id) %>
+		<% posts.first(4).each do |post| %>
+			<p><%= post.name %>
+		<%= post.price %>
+			</p>
+		<% end %>
+	</div>
+<% end %>

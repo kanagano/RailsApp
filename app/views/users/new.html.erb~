@@ -1,0 +1,11 @@
+<%= form_tag("/users/create") do %>
+	<p>store name</p>
+	<input name="name" value="<%= @user.name %>">
+	<p>store place</p>
+	<input name="place" value="<%= @user.place %>">
+	<p>e-mail</p>
+	<input name="email" value="<%= @user.email %>">
+	<p>password</p>
+	<input name="password" type="password" value="<%= @user.password %>">
+	<input type="submit" value="sign up">
+<% end %>
